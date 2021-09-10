@@ -19,19 +19,14 @@ function changeTab() {
       tabs[i].style.zIndex = "0"; //タブを背面に
     }
     else {  //開こうとしたページが
-      if(i == 0){ //最初のページなら無条件で表示
-        pages[i].style.display = "block";
-        tabs[i].style.zIndex = "10";
-        currentPage = i;
-      }else if(clear[i-1]){ //そうでないなら前のページをクリアしていたら表示
-        pages[i].style.display = "block";
-        tabs[i].style.zIndex = "10";
-        currentPage = i;
-      }else{                  //上のどちらでもないなら現在のページに留まる
-        pages[currentPage].style.display = "block";
-        tabs[currentPage].style.zIndex = "10";
-        alert("まだ先へは進めません");
-      }
+      if( pages[i].id != targetid ) {
+      pages[i].style.display = "none";
+      tabs[i].style.zIndex = "0"; //タブを背面に
+    }
+    else {
+      pages[i].style.display = "block";
+      tabs[i].style.zIndex = "10";
+      currentPage = i;
     }
   }
 
@@ -50,7 +45,7 @@ tabs[0].onclick();
 //送信ボタンが押された時に実行
 function answerInput() {
   if(answers[currentPage].value == correctAnswers[currentPage]){
-    if(clear[currentPage]){
+    if(clear[currentPage]){//クリア済みなら何も起きない
       return false;
     }
     clear[currentPage] = true;
@@ -66,7 +61,7 @@ function answerInput() {
       answers[i].disabled = false;
     }
   }
-  if(clear[2] && currentPage==2){
+  if(clear[2] && currentPage==2){//stage3をクリアしたら最終ステージを解放
     tabs[3].style.display = "inline-block";
   }
 }
