@@ -2,7 +2,7 @@
 var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
 var pages = document.getElementById('tabbody').getElementsByTagName('div');
 
-var correctAnswers = ["FAMICOM","おんせい","",""];             //正しい答え
+var correctAnswers = ["","","",""];             //正しい答え
 var answers =  document.getElementsByClassName('answer'); //入力された答え
 var currentPage = 0;                                     //開いているタブ。1が0
 var clear = [false,false,false,false];  //[問1の正誤、問2の正誤、問3の正誤,問4の正誤]
@@ -63,6 +63,6 @@ function answerInput() {
     tabs[3].style.display = "inline-block";
   }
   if(clear[3] && currentPage==3){//stage4クリアでfinal.htmlに移動
-    //final.htmlへ移動あるいはリンクを表示
+   location.href = "final.html";
   }
 }
