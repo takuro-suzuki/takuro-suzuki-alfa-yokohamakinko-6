@@ -49,10 +49,21 @@ tabs[0].onclick();
 //問題正誤判定
 //送信ボタンが押された時に実行
 function answerInput() {
+  if(clear[currentPage]){ //すでにクリアしている場合何も起きないように
+      return false;
+    }
   if(answers[currentPage].value == correctAnswers[currentPage]){
     clear[currentPage] = true;
+    answers[currentPage].nextElementSibling.textContent = "";
   }
   else{
     answers[currentPage].nextElementSibling.textContent = "解答が間違っています";
+  }
+  if(clear[0]){ //Stage1クリア時に入力フォームを入力可能に
+    alert("入力機能が利用可能になりました");
+    for(var i=1; i<tabs.length; i++) {
+      answers[i].placeholder = "答えを入力してください";
+      answers[i].disabled = false;
+    }
   }
 }
