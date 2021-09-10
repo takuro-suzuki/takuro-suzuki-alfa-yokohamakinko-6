@@ -50,9 +50,23 @@ tabs[0].onclick();
 //送信ボタンが押された時に実行
 function answerInput() {
   if(answers[currentPage].value == correctAnswers[currentPage]){
+    if(clear[currentPage]){
+      return false;
+    }
     clear[currentPage] = true;
+    answers[currentPage].nextElementSibling.textContent = "";
   }
   else{
     answers[currentPage].nextElementSibling.textContent = "解答が間違っています";
+  }
+  if(clear[0] && currentPage==0){
+    alert("入力機能が利用可能になりました");
+    for(var i=1; i<tabs.length; i++) {
+      answers[i].placeholder = "答えを入力してください";
+      answers[i].disabled = false;
+    }
+  }
+  if(clear[2] && currentPage==2){
+    tabs[3].style.display = "inline-block";
   }
 }
