@@ -18,11 +18,6 @@ function changeTab() {
       pages[i].style.display = "none";
       tabs[i].style.zIndex = "0"; //タブを背面に
     }
-    else {  //開こうとしたページが
-      if( pages[i].id != targetid ) {
-      pages[i].style.display = "none";
-      tabs[i].style.zIndex = "0"; //タブを背面に
-    }
     else {
       pages[i].style.display = "block";
       tabs[i].style.zIndex = "10";
