@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__logo"><img src="assets/images/logo.svg" alt="チームロゴ"></div>
+      <div class="header__name">N・S高生制作サイト</div>
+    </div>
+  </header>
+  <main>
+    <h1 class="main-title"><img src="assets/images/main-image.png" alt="封鎖された家庭科室からの脱出"></h1>
+    <p id="tabcontrol">
+      <a href="#tabpage1">壱ノ間</a>
+      <a href="#tabpage2">弐ノ間</a>
+      <a href="#tabpage3">参ノ間</a>
+    </p>
+    <div id="tabbody">
+      <div id="tabpage1">
+        <img src="assets/images/stage.png" alt="image:謎"><br>
+        <input type="text" class="answer" placeholder="答えを入力">
+        <p style="text-align: center;"></p>
+        <button onclick='answerInput()'>送信</button>
+      </div>
+      <div id="tabpage2">
+        <img src="assets/images/stage.png" alt="image:謎"><br>
+        <input type="text" class="answer" placeholder="答えを入力"><br>
+        <button onclick='answerInput()'>送信</button>
+      </div>
+      <div id="tabpage3">
+        <img src="assets/images/stage.png" alt="image:謎"><br>
+        <input type="text" class="answer" placeholder="答えを入力"><br>
+        <button onclick='answerInput()'>送信</button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer section bg-color--gray">
+    <div class="container">
+      <p class="text-center">授業主催： N・S高<br>協力：株式会社SCRAP<br>企画制作：N・S高生</p>
+      <p class="text-center">「リアル脱出ゲーム」は株式会社SCRAPの登録商標です。</p>
+      <p class="text-center">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
