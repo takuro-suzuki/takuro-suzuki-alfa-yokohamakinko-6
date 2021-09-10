@@ -2,7 +2,7 @@
 var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
 var pages = document.getElementById('tabbody').getElementsByTagName('div');
 
-var correctAnswers = ["FAMICOM","おんせい",""];             //正しい答え
+var correctAnswers = ["FAMICOM","おんせい","",""];             //正しい答え
 var answers =  document.getElementsByClassName('answer'); //入力された答え
 var currentPage = 0;                                     //開いているタブ。1が0
 var clear = [false,false,false,false];  //[問1の正誤、問2の正誤、問3の正誤,問4の正誤]
@@ -39,15 +39,15 @@ tabs[0].onclick();
 //問題正誤判定
 //送信ボタンが押された時に実行
 function answerInput() {
-  if(answers[currentPage].value == correctAnswers[currentPage]){
-    if(clear[currentPage]){//クリア済みなら何も起きない
+  if(answers[currentPage].value == correctAnswers[currentPage]){//答えが合っている
+    if(clear[currentPage]){                             //クリア済みなら何も起きない
       return false;
     }
     clear[currentPage] = true;
     answers[currentPage].nextElementSibling.textContent = "";
   }
-  else{
-    answers[currentPage].nextElementSibling.textContent = "解答が間違っています";//間違いならこの文章を表示
+  else{                                                       //答えが間違っている
+    answers[currentPage].nextElementSibling.textContent = "解答が間違っています";
   }
   if(clear[0] && currentPage==0){ //stage1をクリアしたら2以降のtextboxを有効に
     alert("入力機能が利用可能になりました");
@@ -61,5 +61,8 @@ function answerInput() {
   }
   if(clear[2] && currentPage==2){//stage3をクリアしたら最終ステージを解放
     tabs[3].style.display = "inline-block";
+  }
+  if(clear[3] && currentPage==3){//stage4クリアでfinal.htmlに移動
+    //final.htmlへ移動あるいはリンクを表示
   }
 }
