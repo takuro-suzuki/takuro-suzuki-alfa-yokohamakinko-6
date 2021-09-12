@@ -27,25 +27,35 @@
       <a href="#tabpage4" style="display: none;">終ノ間</a>
     </p>
     <div id="tabbody">
-      <div id="tabpage1">
-        <img src="assets/images/step1.png" alt="image:謎"><br>
+      <div id="tabpage1" class="tabpage">
+        <div cmanOMat="area">
+          <img src="assets/images/keyboard.png" alt="" id="piece1"><br>
+          <img src="assets/images/key1.png" alt="" cmanOMat="movearea" id="piece2">
+          <img src="assets/images/key2.png" alt="" cmanOMat="movearea" id="piece3">
+          <img src="assets/images/key3.png" alt="" cmanOMat="movearea" id="piece4">
+          <img src="assets/images/key4.png" alt="" cmanOMat="movearea" id="piece5">
+          <img src="assets/images/key5.png" alt="" cmanOMat="movearea" id="piece6">
+        </div>
         <input type="text" class="answer" placeholder="答えを入力">
         <p style="text-align: center;"></p>
         <button onclick='answerInput()'>送信</button>
       </div>
-      <div id="tabpage2">
+      <div id="tabpage2" class="tabpage">
         <img src="assets/images/stage.png" alt="image:謎"><br>
         <input type="text" class="answer" placeholder="入力機能が無効です" disabled="true"><br>
+        <p style="text-align: center;"></p>
         <button onclick='answerInput()'>送信</button>
       </div>
-      <div id="tabpage3">
+      <div id="tabpage3" class="tabpage">
         <img src="assets/images/stage.png" alt="image:謎"><br>
         <input type="text" class="answer" placeholder="入力機能が無効です" disabled="true"><br>
+        <p style="text-align: center;"></p>
         <button onclick='answerInput()'>送信</button>
       </div>
-      <div id="tabpage4">
+      <div id="tabpage4" class="tabpage">
         <img src="assets/images/stage.png" alt="image:謎"><br>
         <input type="text" class="answer" placeholder="入力機能が無効です" disabled="true"><br>
+        <p style="text-align: center;"></p>
         <button onclick='answerInput()'>送信</button>
       </div>
     </div>
@@ -57,6 +67,7 @@
       <p class="text-center">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
     </div>
   </footer>
+  <script src="assets/js/cmanObjMove_v091.js" charset="utf-8"></script>
   <script src="assets/js/main.js" type="text/javascript"></script>
 </body>
 
