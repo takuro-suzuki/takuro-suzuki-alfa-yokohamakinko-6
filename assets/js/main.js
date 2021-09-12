@@ -1,6 +1,6 @@
 // 対象の要素を得る
 var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
-var pages = document.getElementById('tabbody').getElementsByTagName('div');
+var pages = document.getElementById('tabbody').getElementsByClassName('tabpage');
 
 var correctAnswers = ["","","",""];             //正しい答え
 var answers =  document.getElementsByClassName('answer'); //入力された答え
