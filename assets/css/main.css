@@ -38,6 +38,18 @@ input[type=text]{
   padding: 1px;
   padding-left: 5px;
 }
+#piece1{
+  width: 720px;
+  height: 300px;
+}
+#piece2{
+  width: 90px;
+  height: 90px
+}
+#piece3,#piece4,#piece5,#piece6{
+  width: 140px;
+  height: 90px
+}
 /**/ 
 #tabcontrol a:nth-child(1), #tabbody .tabpage:nth-child(1) { background-color: #ffffdd; }/* 1つ目のタブとその中身用の配色*/ 
 #tabcontrol a:nth-child(2), #tabbody .tabpage:nth-child(2) { background-color: #ddffdd; }/* 2つ目のタブとその中身用の配色*/ 
@@ -55,7 +67,7 @@ input[type=text]{
     width: 40px;
     height: 40px
   }
-  #piece3{
+  #piece3,#piece4,#piece5,#piece6{
     width: 60px;
     height: 40px
   }
