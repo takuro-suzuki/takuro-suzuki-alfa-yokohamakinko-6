@@ -6,7 +6,6 @@
   border-color: black;              /* 枠線の色：黒色 */
   border-radius: 0.75em 0.75em 0 0; /* 枠線の左上角と右上角だけを丸く */
   padding: 0.75em 1em;              /* 内側の余白 */
-  margin-left: 50px;
   margin-bottom: 0px;
   text-decoration: none;            /* リンクの下線を消す */
   color: black;                     /* 文字色：黒色 */
@@ -19,13 +18,16 @@
   text-decoration: underline;   /* リンクの下線を引く */
 }
 #tabcontrol{
+  text-align: center;
   margin-bottom: 0px;
 }
 /* ▼タブの中身 */
-#tabbody div {
+#tabbody .tabpage {
+  margin: 0 auto;
+  text-align: center;
   border: 1px solid black; /* 枠線：黒色の実線を1pxの太さで引く */
-  margin: 50px;
   margin-top: -1px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
+  padding-top: 10px;
   padding: 1em;            /* 内側の余白量 */
   background-color: white; /* 背景色：白色 */
   position: relative;      /* z-indexを調整するために必要 */
@@ -36,7 +38,37 @@ input[type=text]{
   padding: 1px;
   padding-left: 5px;
 }
+#piece1{
+  width: 720px;
+  height: 300px;
+}
+#piece2{
+  width: 90px;
+  height: 90px
+}
+#piece3,#piece4,#piece5,#piece6{
+  width: 140px;
+  height: 90px
+}
 /**/ 
-#tabcontrol a:nth-child(1), #tabbody div:nth-child(1) { background-color: #ffffdd; }/* 1つ目のタブとその中身用の配色*/ 
-#tabcontrol a:nth-child(2), #tabbody div:nth-child(2) { background-color: #ddffdd; }/* 2つ目のタブとその中身用の配色*/ 
-#tabcontrol a:nth-child(3), #tabbody div:nth-child(3) { background-color: #ddddff; }/* 3つ目のタブとその中身用の配色 */
+#tabcontrol a:nth-child(1), #tabbody .tabpage:nth-child(1) { background-color: #ffffdd; }/* 1つ目のタブとその中身用の配色*/ 
+#tabcontrol a:nth-child(2), #tabbody .tabpage:nth-child(2) { background-color: #ddffdd; }/* 2つ目のタブとその中身用の配色*/ 
+#tabcontrol a:nth-child(3), #tabbody .tabpage:nth-child(3) { background-color: #ddddff; }/* 3つ目のタブとその中身用の配色 */
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  #tabbody .tabpage{
+    padding: 0px;
+  }
+  #piece1{
+    width: 320px;
+    height: 132px;
+  }
+  #piece2{
+    width: 40px;
+    height: 40px
+  }
+  #piece3,#piece4,#piece5,#piece6{
+    width: 60px;
+    height: 40px
+  }
+}
