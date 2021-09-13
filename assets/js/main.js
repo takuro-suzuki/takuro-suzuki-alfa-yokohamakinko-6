@@ -51,6 +51,7 @@ for (i=0;i<document.form1.cbox1.length;i++) {
      clear[0] = true;
 　　}
 }
+}
 //送信ボタンが押された時に実行
 function answerInput() {
   if(answers[currentPage].value == correctAnswers[currentPage]){//答えが合っている
@@ -73,5 +74,4 @@ function answerInput() {
   if(clear[3] && currentPage==3){//stage4クリアでfinal.htmlに移動
    location.href = "final.html";
   }
-}
 }
