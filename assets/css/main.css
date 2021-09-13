@@ -39,6 +39,10 @@ input[type=text]{
   padding: 1px;
   padding-left: 5px;
 }
+video{
+  max-width: 720px;
+  height: auto;
+}
 #piece1{
   width: 720px;
   height: 300px;
@@ -59,6 +63,10 @@ input[type=text]{
 	/* 480px以下に適用されるCSS（スマホ用） */
   #tabbody .tabpage{
     padding: 0px;
+  }
+  video{
+    max-width: 320px;
+    height: auto;
   }
   #piece1{
     width: 320px;
