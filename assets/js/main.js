@@ -38,19 +38,21 @@ tabs[0].onclick();
 
 //問題正誤判定
 // チェックボックスの中身を一つずつ調べて、チェックされている場所を入力
-for (i=0;i<document.form1.cbox1.length;i++) {
-　　var flag=document.form1.cbox1[i].checked;
-　　if (flag){
-　　　　var value=document.form1.cbox1[i].value;
-    if(value==1 && clear[0]==false){
-      alert("入力機能が利用可能になりました");
-    for(var i=1; i<tabs.length; i++) {
-      answers[i].placeholder = "答えを入力してください";
-      answers[i].disabled = false;
+function check ( ){
+  for (i=0;i<document.form1.cbox1.length;i++) {
+　　   var flag=document.form1.cbox1[i].checked;
+　　   if (flag){
+　　　　    var value=document.form1.cbox1[i].value;
+        if(value==1 && clear[0]==false){
+          alert("入力機能が利用可能になりました");
+          for(var i=1; i<tabs.length; i++) {
+            answers[i].placeholder = "答えを入力してください";
+            answers[i].disabled = false;
+      }
+      clear[0] = true;
+　　    }
     }
-     clear[0] = true;
-　　}
-}
+  }
 }
 //送信ボタンが押された時に実行
 function answerInput() {
