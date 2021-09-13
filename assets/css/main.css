@@ -25,6 +25,7 @@
 #tabbody .tabpage {
   margin: 0 auto;
   text-align: center;
+  max-width: 800px;
   border: 1px solid black; /* 枠線：黒色の実線を1pxの太さで引く */
   margin-top: -1px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
   padding-top: 10px;
