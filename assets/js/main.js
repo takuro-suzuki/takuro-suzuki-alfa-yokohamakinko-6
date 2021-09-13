@@ -2,7 +2,7 @@
 var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
 var pages = document.getElementById('tabbody').getElementsByClassName('tabpage');
 
-var correctAnswers = ["","","",""];             //正しい答え
+var correctAnswers = ["6YPE","ちち","むすめをよろしく"];             //正しい答え
 var answers =  document.getElementsByClassName('answer'); //入力された答え
 var currentPage = 0;                                     //開いているタブ。1が0
 var clear = [false,false,false,false];  //[問1の正誤、問2の正誤、問3の正誤,問4の正誤]
@@ -37,6 +37,20 @@ tabs[0].onclick();
 //ここまでタブ切り替え
 
 //問題正誤判定
+// チェックボックスの中身を一つずつ調べて、チェックされている場所を入力
+for (i=0;i<document.form1.cbox1.length;;i++) {
+　　var flag=document.form1.cbox1[i].checked;
+　　if (flag){
+　　　　var value=document.form1.cbox1[i].value;
+    if(value==1 && clear[0]==false){
+      alert("入力機能が利用可能になりました");
+    for(var i=1; i<tabs.length; i++) {
+      answers[i].placeholder = "答えを入力してください";
+      answers[i].disabled = false;
+    }
+     clear[0] = true;
+　　}
+}
 //送信ボタンが押された時に実行
 function answerInput() {
   if(answers[currentPage].value == correctAnswers[currentPage]){//答えが合っている
@@ -49,13 +63,7 @@ function answerInput() {
   else{                                                       //答えが間違っている
     answers[currentPage].nextElementSibling.textContent = "解答が間違っています";
   }
-  if(clear[0] && currentPage==0){ //stage1をクリアしたら2以降のtextboxを有効に
-    alert("入力機能が利用可能になりました");
-    for(var i=1; i<tabs.length; i++) {
-      answers[i].placeholder = "答えを入力してください";
-      answers[i].disabled = false;
-    }
-  }
+
   if(clear[1] && currentPage==1){
    //ここに動画の差し替え処理 
   }
