@@ -53,6 +53,7 @@ function check ( ){
 　　    }
     }
   }
+  return false;
 }
 //送信ボタンが押された時に実行
 function answerInput() {
