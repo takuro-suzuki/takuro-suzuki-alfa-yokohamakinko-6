@@ -50,6 +50,7 @@ function check ( ){
             answers[i].disabled = false;
       }
       clear[0] = true;
+      answers[currentPage].nextElementSibling.textContent = "";
 　　    }else{
         answers[currentPage].nextElementSibling.textContent = "解答が間違っています";
       }
