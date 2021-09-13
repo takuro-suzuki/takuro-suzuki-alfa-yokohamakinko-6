@@ -36,9 +36,14 @@
           <img src="assets/images/key4.png" alt="" cmanOMat="movearea" id="piece5">
           <img src="assets/images/key5.png" alt="" cmanOMat="movearea" id="piece6">
         </div>
-        <input type="text" class="answer" placeholder="答えを入力">
+        <p>Mの左隣は？</p>
+        <form name="form1" action="#" onSubmit="JavaScript:check();">
+          <input type="radio" name="cbox1" value="0">R<br>
+          <input type="radio" name="cbox1" value="1">L<br>
+          <input type="radio" name="cbox1" value="0">I<br>
+          <input type="submit" value="送信">
+          </form>
         <p style="text-align: center;"></p>
-        <button onclick='answerInput()'>送信</button>
         <a href="hint1.html" target="_blank">ヒントを見る</a>
       </div>
       <div id="tabpage2" class="tabpage">
@@ -49,7 +54,7 @@
         <a href="hint2.html" target="_blank">ヒントを見る</a>
       </div>
       <div id="tabpage3" class="tabpage">
-        <img src="assets/images/stage.png" alt="image:謎"><br>
+        <video src="assets/images/画面収録 2021-09-13 10.27.18.mov" controls></video><br>
         <input type="text" class="answer" placeholder="入力機能が無効です" disabled="true">
         <p style="text-align: center;"></p>
         <button onclick='answerInput()'>送信</button>
