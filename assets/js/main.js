@@ -38,7 +38,7 @@ tabs[0].onclick();
 
 //問題正誤判定
 // チェックボックスの中身を一つずつ調べて、チェックされている場所を入力
-for (i=0;i<document.form1.cbox1.length;;i++) {
+for (i=0;i<document.form1.cbox1.length;i++) {
 　　var flag=document.form1.cbox1[i].checked;
 　　if (flag){
 　　　　var value=document.form1.cbox1[i].value;
@@ -73,4 +73,5 @@ function answerInput() {
   if(clear[3] && currentPage==3){//stage4クリアでfinal.htmlに移動
    location.href = "final.html";
   }
+}
 }
