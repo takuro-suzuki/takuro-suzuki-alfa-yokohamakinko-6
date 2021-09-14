@@ -72,7 +72,9 @@ function answerInput() {
   }
 
   if(clear[1] && currentPage==1){
-   //ここに動画の差し替え処理 
+   var videoEle = document.getElementsByTagName("video");
+   videoEle[0].style.display = "none";
+   videoEle[1].style.display = "inline";
   }
   if(clear[2] && currentPage==2){//stage3をクリアしたら最終ステージを解放
     tabs[3].style.display = "inline-block";
