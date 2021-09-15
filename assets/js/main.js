@@ -79,7 +79,7 @@ function answerInput() {
   }
   if(clear[2] && currentPage==2){//stage3をクリアしたら最終ステージを解放
     tabs[3].style.display = "inline-block";
-    alert("よくぞこの終之間まで辿り着いた!");
+    alert("よくぞこの終ノ間まで辿り着いた!");
   }
   if(clear[3] && currentPage==3){//stage4クリアでfinal.htmlに移動
    location.href = "final.html";
