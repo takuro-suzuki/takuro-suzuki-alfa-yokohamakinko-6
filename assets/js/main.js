@@ -75,6 +75,7 @@ function answerInput() {
    var videoEle = document.getElementsByTagName("video");
    videoEle[0].style.display = "none";
    videoEle[1].style.display = "inline";
+   alert("音声出力が有効になりました");
   }
   if(clear[2] && currentPage==2){//stage3をクリアしたら最終ステージを解放
     tabs[3].style.display = "inline-block";
